@@ -1,0 +1,223 @@
+name: ShadowAntiGrief
+main: com.shadowblox.shadowantigrief.ShadowAntiGrief
+version: 1.0
+description: >
+             This plugin stops players from being able to grief your server using the stereotypical blocks.
+commands:
+  ShadowAntiGrief:
+    description: Shows you the ShadowAntiGrief commands.
+permissions:
+  shadowantigrief.allowrequest.beacon:
+    description: Testing for the beacon request permission.
+    default: false
+  shadowantigrief.allowrequest.bedrock:
+    description: Testing for the bedrock request permission.
+    default: false
+  shadowantigrief.allowrequest.build:
+    description: Testing for the build request permission.
+    default: false
+  shadowantigrief.allowrequest.dispenser:
+    description: Testing for the dispenser request permission.
+    default: false
+  shadowantigrief.allowrequest.dropper:
+    description: Testing for the dropper request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.creeper:
+    description: Testing for the creeper request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.skeleton:
+    description: Testing for the skeleton request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.spider:
+    description: Testing for the spider request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.zombie:
+    description: Testing for the zombie request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.slime:
+    description: Testing for the slime request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.ghast:
+    description: Testing for the ghast request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.zombiepigman:
+    description: Testing for the zombiepigman request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.enderman:
+    description: Testing for the enderman request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.cavespider:
+    description: Testing for the cavespider request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.silverfish:
+    description: Testing for the silverfish request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.blaze:
+    description: Testing for the blaze request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.magmacube:
+    description: Testing for the magmacube request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.witch:
+    description: Testing for the witch request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.bat:
+    description: Testing for the bat request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.sheep:
+    description: Testing for the sheep request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.cow:
+    description: Testing for the cow request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.chicken:
+    description: Testing for the chicken request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.squid:
+    description: Testing for the squid request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.wolf:
+    description: Testing for the wolf request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.mooshroom:
+    description: Testing for the moooshroom request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.ocelot:
+    description: Testing for the ocelot request permission.
+    default: false
+  shadowantigrief.allowrequest.egg.villager:
+    description: Testing for the villager request permission.
+    default: false
+  shadowantigrief.allowrequest.end:
+    description: Testing for the end request permission.
+    default: false
+  shadowantigrief.allowrequest.fire:
+    description: Testing for the fire request permission.
+    default: false
+  shadowantigrief.allowrequest.ice:
+    description: Testing for the ice request permission.
+    default: false
+  shadowantigrief.allowrequest.lava:
+    description: Testing for the lava request permission.
+    default: false
+  shadowantigrief.allowrequest.snow:
+    description: Testing for the snow request permission.
+    default: false
+  shadowantigrief.allowrequest.spawner:
+    description: Testing for the spawner request permission.
+    default: false
+  shadowantigrief.allowrequest.tnt:
+    description: Testing for the tnt request permission.
+    default: false
+  shadowantigrief.allowrequest.water:
+    description: Testing for the water request permission.
+    default: false   
+  shadowantigrief.allow.beacon:
+    description: Testing for the beacon permission.
+    default: false
+  shadowantigrief.allow.bedrock:
+    description: Testing for the bedrock permission.
+    default: false
+  shadowantigrief.allow.build:
+    description: Testing for the build permission.
+    default: false
+  shadowantigrief.allow.dispenser:
+    description: Testing for the dispenser permission.
+    default: false
+  shadowantigrief.allow.dropper:
+    description: Testing for the dropper permission.
+    default: false
+  shadowantigrief.allow.end:
+    description: Testing for the end permission.
+    default: false
+  shadowantigrief.allow.fire:
+    description: Testing for the fire permission.
+    default: false
+  shadowantigrief.allow.ice:
+    description: Testing for the ice permission.
+    default: false
+  shadowantigrief.allow.lava:
+    description: Testing for the lava permission.
+    default: false
+  shadowantigrief.allow.snow:
+    description: Testing for the Snow permission.
+    default: false
+  shadowantigrief.allow.spawner:
+    description: Testing for the spawner permission.
+    default: false
+  shadowantigrief.allow.tnt:
+    description: Testing for the tnt permission.
+    default: false
+  shadowantigrief.allow.water:
+    description: Testing for the water permission.
+    default: false    
+  shadowantigrief.allow.egg.creeper:
+    description: Testing for the creeper permission.
+    default: false    
+  shadowantigrief.allow.egg.skeleton:
+    description: Testing for the skeleton permission.
+    default: false    
+  shadowantigrief.allow.egg.spider:
+    description: Testing for the spider permission.
+    default: false    
+  shadowantigrief.allow.egg.zombie:
+    description: Testing for the zombie permission.
+    default: false    
+  shadowantigrief.allow.egg.slime:
+    description: Testing for the slime permission.
+    default: false    
+  shadowantigrief.allow.egg.ghast:
+    description: Testing for the ghast permission.
+    default: false    
+  shadowantigrief.allow.egg.zombiepigman:
+    description: Testing for the zombie pigman permission.
+    default: false    
+  shadowantigrief.allow.egg.enderman:
+    description: Testing for the enderman permission.
+    default: false    
+  shadowantigrief.allow.egg.cavespider:
+    description: Testing for the cave spider permission.
+    default: false    
+  shadowantigrief.allow.egg.silverfish:
+    description: Testing for the silverfish permission.
+    default: false    
+  shadowantigrief.allow.egg.blaze:
+    description: Testing for the blaze permission.
+    default: false    
+  shadowantigrief.allow.egg.magmacube:
+    description: Testing for the magmacube permission.
+    default: false    
+  shadowantigrief.allow.egg.witch:
+    description: Testing for the witch permission.
+    default: false    
+  shadowantigrief.allow.egg.bat:
+    description: Testing for the bat permission.
+    default: false    
+  shadowantigrief.allow.egg.pig:
+    description: Testing for the pig permission.
+    default: false    
+  shadowantigrief.allow.egg.sheep:
+    description: Testing for the sheep permission.
+    default: false    
+  shadowantigrief.allow.egg.cow:
+    description: Testing for the cow permission.
+    default: false    
+  shadowantigrief.allow.egg.chicken:
+    description: Testing for the chicken permission.
+    default: false    
+  shadowantigrief.allow.egg.squid:
+    description: Testing for the squid permission.
+    default: false    
+  shadowantigrief.allow.egg.wolf:
+    description: Testing for the wolf permission.
+    default: false    
+  shadowantigrief.allow.egg.mooshroom:
+    description: Testing for the mooshroom permission.
+    default: false    
+  shadowantigrief.allow.egg.ocelot:
+    description: Testing for the ocelot permission.
+    default: false    
+  shadowantigrief.allow.egg.villager:
+    description: Testing for the villager permission.
+    default: false    
+    

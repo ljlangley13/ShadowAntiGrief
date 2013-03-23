@@ -15,29 +15,38 @@ public class Format {
 	public static String bannedSettings(String string) {
 		return bannedColour + "You're not allowed to place " + string;
 	}
+
 	public static String modreqSettings(String string) {
-		return modreqColour + "If you would like to request " + string + ", please type /modreq " + string + ".";
+		return modreqColour + "If you would like to request " + string
+				+ ", please type /modreq " + string + ".";
 	}
+
 	public static String eggSettings(String string) {
 		return eggColour + "You're not allowed to use a " + string + " egg.";
 	}
+
 	public static String modreqBuildSettings(String string) {
-		return modreqColour + "If you would like to request to " + string + ", please type /modreq " + string + ".";
+		return modreqColour + "If you would like to request to " + string
+				+ ", please type /modreq " + string + ".";
 	}
+
 	public static String infoSettings(String string) {
 		return infoColour + "" + string;
 	}
+
 	public static String helpSettings(String string) {
 		return helpinfoColour + "/ShadowAntiGrief " + string;
 	}
+
 	public static String helpDescriptionSettings(String string) {
 		return helpdescriptionColour + " - " + string;
 	}
+
 	public static String requestSettings(String string) {
 		return requestColour + "" + string;
 	}
+
 	public static String errorRequestSettings(String string) {
 		return errorRequestColour + "" + string;
 	}
 }
-

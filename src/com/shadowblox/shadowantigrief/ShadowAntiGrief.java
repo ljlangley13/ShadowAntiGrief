@@ -14,6 +14,7 @@ import com.shadowblox.shadowantigrief.listeners.BlockPlaceSnowListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceSpawnerListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceTNTListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceWaterListener;
+import com.shadowblox.shadowantigrief.listeners.CreeperExplosionListener;
 import com.shadowblox.shadowantigrief.listeners.EggBatListener;
 import com.shadowblox.shadowantigrief.listeners.EggBlazeListener;
 import com.shadowblox.shadowantigrief.listeners.EggCaveSpiderListener;
@@ -42,70 +43,76 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class ShadowAntiGrief extends JavaPlugin
-{
-  public final Logger logger = Bukkit.getServer().getLogger();
-  public static ShadowAntiGrief plugin;
-  public CommandManager commandManager;
-  public ShadowAntiGriefCommand shadowantigriefCommand;
-  private static ShadowAntiGrief instance;
+public class ShadowAntiGrief extends JavaPlugin {
+	public final Logger logger = Bukkit.getServer().getLogger();
+	public static ShadowAntiGrief plugin;
+	public CommandManager commandManager;
+	public ShadowAntiGriefCommand shadowantigriefCommand;
+	private static ShadowAntiGrief instance;
 
-  public static ShadowAntiGrief getInstance()
-  {
-    return instance;
-  }
+	public static ShadowAntiGrief getInstance() {
+		return instance;
+	}
 
-  public void onEnable() {
-    File configFile = new File(getDataFolder().getAbsolutePath(), "config.yml");
-    if (!configFile.exists()) {
-      configFile.mkdir();
-      saveDefaultConfig();
-    }
-    initializeListeners();
-    instance = this;
-    commandManager=	new CommandManager(this){{initCommands();}};
-  }
+	public void onEnable() {
+		File configFile = new File(getDataFolder().getAbsolutePath(),
+				"config.yml");
+		if (!configFile.exists()) {
+			configFile.mkdir();
+			saveDefaultConfig();
+		}
+		initializeListeners();
+		instance = this;
+		commandManager = new CommandManager(this) {
+			{
+				initCommands();
+			}
+		};
+	}
 
-  public void onDisable() {
-    PluginDescriptionFile pdfFile = getDescription();
-    this.logger.info(pdfFile.getName() + " has been disabled");
-  }
-  public void initializeListeners() {
-    new BlockPlaceAnyListener(this);
-    new BlockPlaceBeaconListener(this);
-    new BlockPlaceBedrockListener(this);
-    new BlockPlaceDispenserListener(this);
-    new BlockPlaceDropperListener(this);
-    new BlockPlaceEndListener(this);
-    new BlockPlaceFireListener(this);
-    new BlockPlaceIceListener(this);
-    new BlockPlaceLavaListener(this);
-    new BlockPlaceSnowListener(this);
-    new BlockPlaceSpawnerListener(this);
-    new BlockPlaceTNTListener(this);
-    new BlockPlaceWaterListener(this);
-    new WitherListener(this);
+	public void onDisable() {
+		PluginDescriptionFile pdfFile = getDescription();
+		this.logger.info(pdfFile.getName() + " has been disabled");
+	}
 
-    new EggCreeperListener(this);
-    new EggSkeletonListener(this);
-    new EggSpiderListener(this);
-    new EggZombieListener(this);
-    new EggEndermanListener(this);
-    new EggCaveSpiderListener(this);
-    new EggSilverfishListener(this);
-    new EggBlazeListener(this);
-    new EggMagmaCubeListener(this);
-    new EggWitchListener(this);
-    new EggBatListener(this);
-    new EggPigListener(this);
-    new EggSheepListener(this);
-    new EggCowListener(this);
-    new EggChickenListener(this);
-    new EggSquidListener(this);
-    new EggWolfListener(this);
-    new EggMooshroomListener(this);
-    new WitherListener(this);
-    new EggOcelotListener(this);
-    new EggVillagerListener(this);
-  }
+	public void initializeListeners() {
+		new BlockPlaceAnyListener(this);
+		new BlockPlaceBeaconListener(this);
+		new BlockPlaceBedrockListener(this);
+		new BlockPlaceDispenserListener(this);
+		new BlockPlaceDropperListener(this);
+		new BlockPlaceEndListener(this);
+		new BlockPlaceFireListener(this);
+		new BlockPlaceIceListener(this);
+		new BlockPlaceLavaListener(this);
+		new BlockPlaceSnowListener(this);
+		new BlockPlaceSpawnerListener(this);
+		new BlockPlaceTNTListener(this);
+		new BlockPlaceWaterListener(this);
+		new WitherListener(this);
+		new CreeperExplosionListener(this);
+
+		new EggCreeperListener(this);
+		new EggSkeletonListener(this);
+		new EggSpiderListener(this);
+		new EggZombieListener(this);
+		new EggEndermanListener(this);
+		new EggCaveSpiderListener(this);
+		new EggSilverfishListener(this);
+		new EggBlazeListener(this);
+		new EggMagmaCubeListener(this);
+		new EggWitchListener(this);
+		new EggBatListener(this);
+		new EggPigListener(this);
+		new EggSheepListener(this);
+		new EggCowListener(this);
+		new EggChickenListener(this);
+		new EggSquidListener(this);
+		new EggWolfListener(this);
+		new EggMooshroomListener(this);
+		new WitherListener(this);
+		new EggOcelotListener(this);
+		new EggVillagerListener(this);
+		new CreeperExplosionListener(this);
+	}
 }

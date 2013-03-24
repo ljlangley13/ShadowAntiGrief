@@ -35,9 +35,11 @@ import com.shadowblox.shadowantigrief.listeners.EggVillagerListener;
 import com.shadowblox.shadowantigrief.listeners.EggWitchListener;
 import com.shadowblox.shadowantigrief.listeners.EggWolfListener;
 import com.shadowblox.shadowantigrief.listeners.EggZombieListener;
+import com.shadowblox.shadowantigrief.listeners.InvisibilityListener;
 import com.shadowblox.shadowantigrief.listeners.WitherListener;
 import com.shadowblox.shadowantigrief.managers.CommandManager;
 import java.io.File;
+import java.io.IOException;
 import java.util.logging.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.plugin.PluginDescriptionFile;
@@ -55,6 +57,12 @@ public class ShadowAntiGrief extends JavaPlugin {
 	}
 
 	public void onEnable() {
+		try {
+			Metrics metrics = new Metrics(this);
+			metrics.start();
+		} catch (IOException e) {
+			System.out.println("Error Submitting stats!");
+		}
 		File configFile = new File(getDataFolder().getAbsolutePath(),
 				"config.yml");
 		if (!configFile.exists()) {
@@ -91,6 +99,7 @@ public class ShadowAntiGrief extends JavaPlugin {
 		new BlockPlaceWaterListener(this);
 		new WitherListener(this);
 		new CreeperExplosionListener(this);
+		new InvisibilityListener(this);
 
 		new EggCreeperListener(this);
 		new EggSkeletonListener(this);
@@ -114,5 +123,6 @@ public class ShadowAntiGrief extends JavaPlugin {
 		new EggOcelotListener(this);
 		new EggVillagerListener(this);
 		new CreeperExplosionListener(this);
+		new InvisibilityListener(this);
 	}
 }

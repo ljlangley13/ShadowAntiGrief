@@ -5,14 +5,15 @@ import com.shadowblox.shadowantigrief.ShadowAntiGrief;
 import com.shadowblox.shadowantigrief.korikutils.SubCommandExecutor;
 import org.bukkit.command.CommandSender;
 
-public class ShadowAntiGriefCommand extends SubCommandExecutor {
-	public ShadowAntiGriefCommand(ShadowAntiGrief instance) {
+public class SAGCommand extends SubCommandExecutor {
+	public SAGCommand(ShadowAntiGrief instance) {
 	}
 
 	@command
 	public void Null(CommandSender sender, String[] args) {
 		sender.sendMessage(Format.infoSettings("ShadowAntiGrief:"));
-		sender.sendMessage(Format.rememberSettings("Remember, you can use /SAG for short."));
+		sender.sendMessage(Format
+				.rememberSettings("Remember, you can use /SAG for short."));
 		sender.sendMessage(Format.helpSettings("Help")
 				+ Format.helpDescriptionSettings("Shows you the help."));
 	}
@@ -20,7 +21,8 @@ public class ShadowAntiGriefCommand extends SubCommandExecutor {
 	@command
 	public void help(CommandSender sender, String[] args) {
 		sender.sendMessage(Format.infoSettings("ShadowAntiGrief Commands:"));
-		sender.sendMessage(Format.rememberSettings("Remember, you can use /SAG for short."));
+		sender.sendMessage(Format
+				.rememberSettings("Remember, you can use /SAG for short."));
 		sender.sendMessage(Format.helpSettings("Help")
 				+ Format.helpDescriptionSettings("Shows you the help."));
 		sender.sendMessage(Format.helpSettings("Version")

@@ -79,3 +79,5 @@ ModReq-Egg-Villager: false
 Block-Wither-Spawn: true
 #Do you want to block creepers from destroying blocks when they explode?
 Creeper-Explosion: true
+#Do you want to block players from becoming invisible?
+Enable-Vanish: true

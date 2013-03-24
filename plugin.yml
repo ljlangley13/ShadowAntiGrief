@@ -6,10 +6,15 @@ description: >
 commands:
   ShadowAntiGrief:
     description: Shows you the ShadowAntiGrief commands.
+  SAG:
+    description: Shows you the ShadowAntiGrief commands. It's short for ShadowAntiGrief.
 permissions:
   shadowantigrief.allowrequest.beacon:
     description: Testing for the beacon request permission.
     default: false
+  ShadowAntiGrief.allow.invisibility:
+    description: Testing for the invisibility permission.
+    default: false     
   shadowantigrief.allowrequest.bedrock:
     description: Testing for the bedrock request permission.
     default: false

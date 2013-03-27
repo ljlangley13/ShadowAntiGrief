@@ -20,14 +20,7 @@ public class BlockPlaceSnowListener implements Listener{
 	@EventHandler(ignoreCancelled=true)
 	public void onBlockPlace(BlockPlaceEvent event){
 	    Player player = event.getPlayer();
-	    if ((event.getBlockPlaced().getTypeId() == 78) && (!player.hasPermission("ShadowAntiGrief.allow.snow")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Snow") == true)){
-			event.setCancelled(true);
-			player.sendMessage(Format.bannedSettings("Snow."));
-			if ((plugin.getConfig().getBoolean("ModReq-Snow") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.snow"))){
-				player.sendMessage(Format.modreqSettings("Snow"));
-			}
-	    }
-	    if ((event.getBlockPlaced().getTypeId() == 80) && (!player.hasPermission("ShadowAntiGrief.allow.snow")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Snow") == true)){
+	    if ((event.getBlockPlaced().getTypeId() == 78) && (event.getBlockPlaced().getTypeId() == 80) && (!player.hasPermission("ShadowAntiGrief.allow.snow")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Snow") == true)){
 			event.setCancelled(true);
 			player.sendMessage(Format.bannedSettings("Snow."));
 			if ((plugin.getConfig().getBoolean("ModReq-Snow") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.snow"))){

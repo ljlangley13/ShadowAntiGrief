@@ -21,14 +21,7 @@ public class BlockPlaceWaterListener implements Listener{
 	@EventHandler(ignoreCancelled=true)
 	public void onBlockPlace(BlockPlaceEvent event){
 	    Player player = event.getPlayer();
-	    if ((event.getBlockPlaced().getTypeId() == 8) && (!player.hasPermission("ShadowAntiGrief.allow.water")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Water") == true)){
-			event.setCancelled(true);
-			player.sendMessage(Format.bannedSettings("Water."));
-			if ((plugin.getConfig().getBoolean("ModReq-Water") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.water"))){
-				player.sendMessage(Format.modreqSettings("Water"));
-			}
-	    }
-	    if ((event.getBlockPlaced().getTypeId() == 9) && (!player.hasPermission("ShadowAntiGrief.allow.water")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Water") == true)){
+	    if ((event.getBlockPlaced().getTypeId() == 8) && (event.getBlockPlaced().getTypeId() == 9) && (!player.hasPermission("ShadowAntiGrief.allow.water")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Water") == true)){
 			event.setCancelled(true);
 			player.sendMessage(Format.bannedSettings("Water."));
 			if ((plugin.getConfig().getBoolean("ModReq-Water") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.water"))){

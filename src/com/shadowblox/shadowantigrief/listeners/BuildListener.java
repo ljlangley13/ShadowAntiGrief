@@ -11,10 +11,10 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import com.shadowblox.shadowantigrief.Format;
 import com.shadowblox.shadowantigrief.ShadowAntiGrief;
 
-public class BlockPlaceAnyListener implements Listener{
+public class BuildListener implements Listener{
 	public static ShadowAntiGrief plugin;
 	
-	public BlockPlaceAnyListener(ShadowAntiGrief instance) {
+	public BuildListener(ShadowAntiGrief instance) {
 		plugin = instance;
 		Bukkit.getServer().getPluginManager().registerEvents(this, instance);
 	}

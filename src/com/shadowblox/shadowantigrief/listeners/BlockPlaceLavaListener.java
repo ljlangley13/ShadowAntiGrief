@@ -21,14 +21,7 @@ public class BlockPlaceLavaListener implements Listener{
 	@EventHandler(ignoreCancelled=true)
 	public void onBlockPlace(BlockPlaceEvent event){
 	    Player player = event.getPlayer();
-	    if ((event.getBlockPlaced().getTypeId() == 10) && (!player.hasPermission("ShadowAntiGrief.allow.lava")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Lava") == true)){
-			event.setCancelled(true);
-			player.sendMessage(Format.bannedSettings("Lava."));
-			if ((plugin.getConfig().getBoolean("ModReq-Lava") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.lava"))){
-				player.sendMessage(Format.modreqSettings("Lava"));
-			}
-	    }
-	    if ((event.getBlockPlaced().getTypeId() == 11) && (!player.hasPermission("ShadowAntiGrief.allow.lava")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Lava") == true)){
+	    if ((event.getBlockPlaced().getTypeId() == 10) && (event.getBlockPlaced().getTypeId() == 11) && (!player.hasPermission("ShadowAntiGrief.allow.lava")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-Lava") == true)){
 			event.setCancelled(true);
 			player.sendMessage(Format.bannedSettings("Lava."));
 			if ((plugin.getConfig().getBoolean("ModReq-Lava") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.lava"))){

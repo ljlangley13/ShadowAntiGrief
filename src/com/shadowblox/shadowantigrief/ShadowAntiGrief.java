@@ -1,7 +1,7 @@
 package com.shadowblox.shadowantigrief;
 
 import com.shadowblox.shadowantigrief.commands.ShadowAntiGriefCommand;
-import com.shadowblox.shadowantigrief.listeners.BlockPlaceAnyListener;
+import com.shadowblox.shadowantigrief.listeners.BuildListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceBeaconListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceBedrockListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceDispenserListener;
@@ -84,7 +84,7 @@ public class ShadowAntiGrief extends JavaPlugin {
 	}
 
 	public void initializeListeners() {
-		new BlockPlaceAnyListener(this);
+		new BuildListener(this);
 		new BlockPlaceBeaconListener(this);
 		new BlockPlaceBedrockListener(this);
 		new BlockPlaceDispenserListener(this);

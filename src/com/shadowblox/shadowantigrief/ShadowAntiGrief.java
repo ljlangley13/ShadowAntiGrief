@@ -14,6 +14,7 @@ import com.shadowblox.shadowantigrief.listeners.BlockPlaceSnowListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceSpawnerListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceTNTListener;
 import com.shadowblox.shadowantigrief.listeners.BlockPlaceWaterListener;
+import com.shadowblox.shadowantigrief.listeners.ChatListener;
 import com.shadowblox.shadowantigrief.listeners.CreeperExplosionListener;
 import com.shadowblox.shadowantigrief.listeners.EggBatListener;
 import com.shadowblox.shadowantigrief.listeners.EggBlazeListener;
@@ -100,6 +101,7 @@ public class ShadowAntiGrief extends JavaPlugin {
 		new WitherListener(this);
 		new CreeperExplosionListener(this);
 		new InvisibilityListener(this);
+		new ChatListener(this);
 
 		new EggCreeperListener(this);
 		new EggSkeletonListener(this);

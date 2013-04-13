@@ -27,5 +27,5 @@ public class BlockPlaceBedrockListener implements Listener{
 				player.sendMessage(Format.modreqSettings("Bedrock"));
 			}
 	    }	
-	}
+	}	
 }

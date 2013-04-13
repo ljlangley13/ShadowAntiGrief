@@ -17,7 +17,6 @@ public class Format {
 	public static String bannedSettings(String string) {
 		return bannedColour + "You're not allowed to place " + string;
 	}
-
 	public static String modreqSettings(String string) {
 		return modreqColour + "If you would like to request " + string
 				+ ", please type /modreq " + string + ".";

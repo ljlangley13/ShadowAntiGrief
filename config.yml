@@ -81,3 +81,5 @@ Block-Wither-Spawn: true
 Creeper-Explosion: true
 #Do you want to block players from becoming invisible?
 Enable-Vanish: true
+#Do you want to remove all commands from OP?
+Enable-OPNoCommands: false

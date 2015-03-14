@@ -2,6 +2,8 @@ package com.shadowblox.shadowantigrief.listeners;
 
 
 import org.bukkit.Bukkit;
+import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,7 +22,8 @@ public class BlockPlaceTNTListener implements Listener{
 	@EventHandler(ignoreCancelled=true)
 	public void onBlockPlace(BlockPlaceEvent event){
 	    Player player = event.getPlayer();
-	    if ((event.getBlockPlaced().getTypeId() == 46)&& (!player.hasPermission("ShadowAntiGrief.allow.tnt")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-TNT") == true)){
+	    Block block = event.getBlockPlaced();
+	    if ((block.getType() == Material.TNT) && (!player.hasPermission("ShadowAntiGrief.allow.tnt")) && (!player.isOp())  && (plugin.getConfig().getBoolean("Enable-TNT") == true)){
 			event.setCancelled(true);
 			player.sendMessage(Format.bannedSettings("TNT."));
 			if ((plugin.getConfig().getBoolean("ModReq-TNT") == true) && (player.hasPermission("ShadowAntiGrief.allowrequest.tnt"))){
